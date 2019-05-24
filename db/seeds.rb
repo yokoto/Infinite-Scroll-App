@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
+250.times do |i|
+  Shop.create!(
+    name: "店名#{i}",
+    zipcode: "111-#{sprintf("%04d", i)}",
+    address: "住所#{i}",
+    tel: "00-1234-#{sprintf("%04d", i)}"
+  )
+end
